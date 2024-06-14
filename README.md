@@ -37,7 +37,7 @@
  *7. Seasonal and Trending Recommendations:*
    - Providing seasonal and trending recommendations keeps the app relevant and up-to-date with fashion trends. It shows that your app is actively curating the latest styles for users.
 
- *9. Chatbot:*
+ *8. Chatbot:*
    - A chatbot can provide real-time customer support, answer user queries, help with recommendations, and assist with common issues.
    - Chatbots enhance user engagement and customer satisfaction by providing immediate assistance.
 
