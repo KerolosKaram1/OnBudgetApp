@@ -1,8 +1,9 @@
 # OnBudgetApp
 
-Mobile Repository:
-See mobile repository here: [link of the repo]
+**Mobile Repository:**  
+**See mobile application repository here:** [[link of the repo](https://github.com/EbramShereen/on_budget)]
 
+---
 
  **Project Scope:**
 
