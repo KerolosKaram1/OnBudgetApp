@@ -1,0 +1,24 @@
+// methods
+@mixin displayFlex(
+  $flex-direction: row,
+  $flex-wrap: nowrap,
+  $justify-content: flex-start,
+  $align-items: stretch,
+  $gap: 0
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  flex-wrap: $flex-wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap: $gap;
+}
+
+@mixin animation(
+  $name: fade-in-left,
+  $controlPoints: cubic-bezier(0.39, 0.575, 0.565, 1),
+  $fillMode: both
+) {
+  -webkit-animation: $name $time $controlPoints $fillMode;
+  animation: $name $time $controlPoints $fillMode;
+}

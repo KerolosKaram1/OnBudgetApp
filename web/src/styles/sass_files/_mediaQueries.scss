@@ -1,0 +1,44 @@
+@media only screen and (max-width: 700px) {
+  header {
+    height: 7rem;
+
+    .container {
+      height: 7rem;
+
+      @include displayFlex(column, nowrap, space-around, center);
+
+      .logo {
+        height: 70%;
+      }
+
+      nav .searchIcon {
+        display: inline;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  header {
+    height: 6rem;
+
+    .container {
+      height: 6rem;
+
+      .logo {
+        min-width: 7rem;
+        height: 2.5rem;
+      }
+      nav {
+        width: 11rem;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .searchContainer {
+    display: none;
+  }
+}

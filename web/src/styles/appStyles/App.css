@@ -1,0 +1,27 @@
+body {
+  height: 100vh;
+  font-family: Arial;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: white; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #006880; /* color of the scroll thumb */
+  /* roundness of the scroll thumb */
+  /* border-radius: 1.25rem;  */
+  cursor: grab;
+  /* creates padding around scroll thumb */
+  /* border: 0.18rem solid #006880;  */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #0194b5;
+} /*# sourceMappingURL=App.css.map */

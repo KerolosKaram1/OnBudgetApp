@@ -1,0 +1,506 @@
+/**
+ * ----------------------------------------
+ * animation bounce-top
+ * ----------------------------------------
+ */
+@keyframes bounce-top {
+  0% {
+    transform: translateY(-50vh);
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-24px);
+    animation-timing-function: ease-in;
+  }
+  65% {
+    transform: translateY(-12px);
+    animation-timing-function: ease-in;
+  }
+  82% {
+    transform: translateY(-6px);
+    animation-timing-function: ease-in;
+  }
+  93% {
+    transform: translateY(-4px);
+    animation-timing-function: ease-in;
+  }
+  25%, 55%, 75%, 87% {
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+/**
+   * ----------------------------------------
+   * animation fade-in-left
+   * ----------------------------------------
+   */
+@keyframes fade-in-left {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/**
+   * ----------------------------------------
+   * animation fade-in-right
+   * ----------------------------------------
+   */
+@keyframes fade-in-right {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/**
+    * Opacity animation
+    */
+@keyframes zeroToOneOpacity {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 50%;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.section_1, .section_2,
+.section_3,
+.section_4 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0;
+}
+.section_1 .left-side, .section_2 .left-side,
+.section_3 .left-side,
+.section_4 .left-side {
+  width: 66%;
+  height: 100vh;
+  background-color: rgb(0, 104, 128);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-family: "Arial";
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.section_1 .left-side h1, .section_2 .left-side h1,
+.section_3 .left-side h1,
+.section_4 .left-side h1 {
+  color: rgb(255, 255, 255);
+  font-size: 34px;
+  animation: fade-in-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.section_1 .left-side p, .section_2 .left-side p,
+.section_3 .left-side p,
+.section_4 .left-side p {
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  word-spacing: 0.2rem;
+  animation: fade-in-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.section_1 .left-side p span, .section_2 .left-side p span,
+.section_3 .left-side p span,
+.section_4 .left-side p span {
+  font-weight: bold;
+  font-size: 22px;
+  font-family: "Comic Sans MS";
+  color: rgb(255, 205, 78);
+}
+.section_1 .left-side button, .section_2 .left-side button,
+.section_3 .left-side button,
+.section_4 .left-side button, .section_1 .left-side .goToLoginBtn, .section_2 .left-side .goToLoginBtn,
+.section_3 .left-side .goToLoginBtn,
+.section_4 .left-side .goToLoginBtn,
+.section_1 .left-side .goToSignUpBtn,
+.section_2 .left-side .goToSignUpBtn,
+.section_3 .left-side .goToSignUpBtn,
+.section_4 .left-side .goToSignUpBtn {
+  width: 7rem;
+  height: 2.5rem;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 104, 128);
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.4);
+  transition: 0.3s;
+  animation: bounce-top 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.section_1 .left-side button:not(:disabled):hover, .section_2 .left-side button:not(:disabled):hover,
+.section_3 .left-side button:not(:disabled):hover,
+.section_4 .left-side button:not(:disabled):hover, .section_1 .left-side .goToLoginBtn:not(:disabled):hover, .section_2 .left-side .goToLoginBtn:not(:disabled):hover,
+.section_3 .left-side .goToLoginBtn:not(:disabled):hover,
+.section_4 .left-side .goToLoginBtn:not(:disabled):hover,
+.section_1 .left-side .goToSignUpBtn:not(:disabled):hover,
+.section_2 .left-side .goToSignUpBtn:not(:disabled):hover,
+.section_3 .left-side .goToSignUpBtn:not(:disabled):hover,
+.section_4 .left-side .goToSignUpBtn:not(:disabled):hover {
+  cursor: pointer;
+  background-color: rgb(255, 205, 78);
+  color: rgb(240, 58, 23);
+}
+.section_1 .left-side button:disabled, .section_2 .left-side button:disabled,
+.section_3 .left-side button:disabled,
+.section_4 .left-side button:disabled, .section_1 .left-side .goToLoginBtn:disabled, .section_2 .left-side .goToLoginBtn:disabled,
+.section_3 .left-side .goToLoginBtn:disabled,
+.section_4 .left-side .goToLoginBtn:disabled,
+.section_1 .left-side .goToSignUpBtn:disabled,
+.section_2 .left-side .goToSignUpBtn:disabled,
+.section_3 .left-side .goToSignUpBtn:disabled,
+.section_4 .left-side .goToSignUpBtn:disabled {
+  cursor: not-allowed;
+  background-color: rgb(204, 204, 204);
+}
+.section_1 .left-side .goToLoginBtn, .section_2 .left-side .goToLoginBtn,
+.section_3 .left-side .goToLoginBtn,
+.section_4 .left-side .goToLoginBtn,
+.section_1 .left-side .goToSignUpBtn,
+.section_2 .left-side .goToSignUpBtn,
+.section_3 .left-side .goToSignUpBtn,
+.section_4 .left-side .goToSignUpBtn {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.section_1 .left-side .dots, .section_2 .left-side .dots,
+.section_3 .left-side .dots,
+.section_4 .left-side .dots {
+  width: 3rem;
+  height: 0.6rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 0;
+}
+.section_1 .left-side .dots .dot1, .section_2 .left-side .dots .dot1,
+.section_3 .left-side .dots .dot1,
+.section_4 .left-side .dots .dot1,
+.section_1 .left-side .dots .dot2,
+.section_2 .left-side .dots .dot2,
+.section_3 .left-side .dots .dot2,
+.section_4 .left-side .dots .dot2,
+.section_1 .left-side .dots .dot3,
+.section_2 .left-side .dots .dot3,
+.section_3 .left-side .dots .dot3,
+.section_4 .left-side .dots .dot3 {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+}
+.section_1 .left-side .loginForm, .section_2 .left-side .loginForm,
+.section_3 .left-side .loginForm,
+.section_4 .left-side .loginForm {
+  width: 35%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.section_1 .left-side .loginForm .inputFieldImg, .section_2 .left-side .loginForm .inputFieldImg,
+.section_3 .left-side .loginForm .inputFieldImg,
+.section_4 .left-side .loginForm .inputFieldImg {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  animation: fade-in-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.section_1 .left-side .loginForm .emailInput, .section_2 .left-side .loginForm .emailInput,
+.section_3 .left-side .loginForm .emailInput,
+.section_4 .left-side .loginForm .emailInput,
+.section_1 .left-side .loginForm .passInput,
+.section_2 .left-side .loginForm .passInput,
+.section_3 .left-side .loginForm .passInput,
+.section_4 .left-side .loginForm .passInput {
+  width: 16rem;
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  padding-left: 2.5rem;
+  animation: fade-in-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.section_1 .left-side .loginForm .emailInput::-moz-placeholder, .section_2 .left-side .loginForm .emailInput::-moz-placeholder, .section_3 .left-side .loginForm .emailInput::-moz-placeholder, .section_4 .left-side .loginForm .emailInput::-moz-placeholder, .section_1 .left-side .loginForm .passInput::-moz-placeholder, .section_2 .left-side .loginForm .passInput::-moz-placeholder, .section_3 .left-side .loginForm .passInput::-moz-placeholder, .section_4 .left-side .loginForm .passInput::-moz-placeholder {
+  color: rgb(204, 204, 204);
+  font-size: 16px;
+}
+.section_1 .left-side .loginForm .emailInput::placeholder, .section_2 .left-side .loginForm .emailInput::placeholder,
+.section_3 .left-side .loginForm .emailInput::placeholder,
+.section_4 .left-side .loginForm .emailInput::placeholder,
+.section_1 .left-side .loginForm .passInput::placeholder,
+.section_2 .left-side .loginForm .passInput::placeholder,
+.section_3 .left-side .loginForm .passInput::placeholder,
+.section_4 .left-side .loginForm .passInput::placeholder {
+  color: rgb(204, 204, 204);
+  font-size: 16px;
+}
+.section_1 .left-side .loginForm .rememberMeInput, .section_2 .left-side .loginForm .rememberMeInput,
+.section_3 .left-side .loginForm .rememberMeInput,
+.section_4 .left-side .loginForm .rememberMeInput,
+.section_1 .left-side .loginForm .showPassInput,
+.section_2 .left-side .loginForm .showPassInput,
+.section_3 .left-side .loginForm .showPassInput,
+.section_4 .left-side .loginForm .showPassInput {
+  cursor: pointer;
+  width: 0.9rem;
+  height: 0.9rem;
+}
+.section_1 .left-side .loginForm span, .section_2 .left-side .loginForm span,
+.section_3 .left-side .loginForm span,
+.section_4 .left-side .loginForm span,
+.section_1 .left-side .loginForm .alreadyHaveAcc,
+.section_2 .left-side .loginForm .alreadyHaveAcc,
+.section_3 .left-side .loginForm .alreadyHaveAcc,
+.section_4 .left-side .loginForm .alreadyHaveAcc,
+.section_1 .left-side .loginForm .register,
+.section_2 .left-side .loginForm .register,
+.section_3 .left-side .loginForm .register,
+.section_4 .left-side .loginForm .register {
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+  transition: 0.3s;
+}
+.section_1 .left-side .loginForm span:hover, .section_2 .left-side .loginForm span:hover,
+.section_3 .left-side .loginForm span:hover,
+.section_4 .left-side .loginForm span:hover,
+.section_1 .left-side .loginForm .alreadyHaveAcc:hover,
+.section_2 .left-side .loginForm .alreadyHaveAcc:hover,
+.section_3 .left-side .loginForm .alreadyHaveAcc:hover,
+.section_4 .left-side .loginForm .alreadyHaveAcc:hover,
+.section_1 .left-side .loginForm .register:hover,
+.section_2 .left-side .loginForm .register:hover,
+.section_3 .left-side .loginForm .register:hover,
+.section_4 .left-side .loginForm .register:hover {
+  color: rgb(255, 205, 78);
+}
+.section_1 .left-side .loginForm .loginAPIs, .section_2 .left-side .loginForm .loginAPIs,
+.section_3 .left-side .loginForm .loginAPIs,
+.section_4 .left-side .loginForm .loginAPIs {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-inline: 0.4rem;
+  transition: 0.5s;
+  animation: zeroToOneOpacity 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.section_1 .left-side .loginForm .loginAPIs:hover, .section_2 .left-side .loginForm .loginAPIs:hover,
+.section_3 .left-side .loginForm .loginAPIs:hover,
+.section_4 .left-side .loginForm .loginAPIs:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.section_1 .left-side .signUpForm, .section_2 .left-side .signUpForm,
+.section_3 .left-side .signUpForm,
+.section_4 .left-side .signUpForm {
+  margin-top: -2rem;
+  width: 40%;
+  height: 83%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.section_1 .left-side .signUpForm .nameInput, .section_2 .left-side .signUpForm .nameInput,
+.section_3 .left-side .signUpForm .nameInput,
+.section_4 .left-side .signUpForm .nameInput,
+.section_1 .left-side .signUpForm .phoneInput,
+.section_2 .left-side .signUpForm .phoneInput,
+.section_3 .left-side .signUpForm .phoneInput,
+.section_4 .left-side .signUpForm .phoneInput,
+.section_1 .left-side .signUpForm .emailInput,
+.section_2 .left-side .signUpForm .emailInput,
+.section_3 .left-side .signUpForm .emailInput,
+.section_4 .left-side .signUpForm .emailInput,
+.section_1 .left-side .signUpForm .passInput,
+.section_2 .left-side .signUpForm .passInput,
+.section_3 .left-side .signUpForm .passInput,
+.section_4 .left-side .signUpForm .passInput,
+.section_1 .left-side .signUpForm .confirmPassInput,
+.section_2 .left-side .signUpForm .confirmPassInput,
+.section_3 .left-side .signUpForm .confirmPassInput,
+.section_4 .left-side .signUpForm .confirmPassInput {
+  width: 16rem;
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  padding-left: 2.5rem;
+  animation: fade-in-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.section_1 .left-side .signUpForm .nameInput::-moz-placeholder, .section_2 .left-side .signUpForm .nameInput::-moz-placeholder, .section_3 .left-side .signUpForm .nameInput::-moz-placeholder, .section_4 .left-side .signUpForm .nameInput::-moz-placeholder, .section_1 .left-side .signUpForm .phoneInput::-moz-placeholder, .section_2 .left-side .signUpForm .phoneInput::-moz-placeholder, .section_3 .left-side .signUpForm .phoneInput::-moz-placeholder, .section_4 .left-side .signUpForm .phoneInput::-moz-placeholder, .section_1 .left-side .signUpForm .emailInput::-moz-placeholder, .section_2 .left-side .signUpForm .emailInput::-moz-placeholder, .section_3 .left-side .signUpForm .emailInput::-moz-placeholder, .section_4 .left-side .signUpForm .emailInput::-moz-placeholder, .section_1 .left-side .signUpForm .passInput::-moz-placeholder, .section_2 .left-side .signUpForm .passInput::-moz-placeholder, .section_3 .left-side .signUpForm .passInput::-moz-placeholder, .section_4 .left-side .signUpForm .passInput::-moz-placeholder, .section_1 .left-side .signUpForm .confirmPassInput::-moz-placeholder, .section_2 .left-side .signUpForm .confirmPassInput::-moz-placeholder, .section_3 .left-side .signUpForm .confirmPassInput::-moz-placeholder, .section_4 .left-side .signUpForm .confirmPassInput::-moz-placeholder {
+  color: rgb(204, 204, 204);
+  font-size: 16px;
+}
+.section_1 .left-side .signUpForm .nameInput::placeholder, .section_2 .left-side .signUpForm .nameInput::placeholder,
+.section_3 .left-side .signUpForm .nameInput::placeholder,
+.section_4 .left-side .signUpForm .nameInput::placeholder,
+.section_1 .left-side .signUpForm .phoneInput::placeholder,
+.section_2 .left-side .signUpForm .phoneInput::placeholder,
+.section_3 .left-side .signUpForm .phoneInput::placeholder,
+.section_4 .left-side .signUpForm .phoneInput::placeholder,
+.section_1 .left-side .signUpForm .emailInput::placeholder,
+.section_2 .left-side .signUpForm .emailInput::placeholder,
+.section_3 .left-side .signUpForm .emailInput::placeholder,
+.section_4 .left-side .signUpForm .emailInput::placeholder,
+.section_1 .left-side .signUpForm .passInput::placeholder,
+.section_2 .left-side .signUpForm .passInput::placeholder,
+.section_3 .left-side .signUpForm .passInput::placeholder,
+.section_4 .left-side .signUpForm .passInput::placeholder,
+.section_1 .left-side .signUpForm .confirmPassInput::placeholder,
+.section_2 .left-side .signUpForm .confirmPassInput::placeholder,
+.section_3 .left-side .signUpForm .confirmPassInput::placeholder,
+.section_4 .left-side .signUpForm .confirmPassInput::placeholder {
+  color: rgb(204, 204, 204);
+  font-size: 16px;
+}
+.section_1 .left-side .signUpForm .inputFieldImg, .section_2 .left-side .signUpForm .inputFieldImg,
+.section_3 .left-side .signUpForm .inputFieldImg,
+.section_4 .left-side .signUpForm .inputFieldImg {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  animation: fade-in-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.section_1 .left-side .signUpForm .genderImg, .section_2 .left-side .signUpForm .genderImg,
+.section_3 .left-side .signUpForm .genderImg,
+.section_4 .left-side .signUpForm .genderImg,
+.section_1 .left-side .signUpForm .userType,
+.section_2 .left-side .signUpForm .userType,
+.section_3 .left-side .signUpForm .userType,
+.section_4 .left-side .signUpForm .userType {
+  margin-inline: 1rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  transition: 0.5s;
+  animation: zeroToOneOpacity 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.section_1 .left-side .signUpForm .genderImg:hover, .section_2 .left-side .signUpForm .genderImg:hover,
+.section_3 .left-side .signUpForm .genderImg:hover,
+.section_4 .left-side .signUpForm .genderImg:hover,
+.section_1 .left-side .signUpForm .userType:hover,
+.section_2 .left-side .signUpForm .userType:hover,
+.section_3 .left-side .signUpForm .userType:hover,
+.section_4 .left-side .signUpForm .userType:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.section_1 .left-side .signUpForm .policiesInput, .section_2 .left-side .signUpForm .policiesInput,
+.section_3 .left-side .signUpForm .policiesInput,
+.section_4 .left-side .signUpForm .policiesInput {
+  cursor: pointer;
+  width: 0.9rem;
+  height: 0.9rem;
+}
+.section_1 .left-side .signUpForm span, .section_2 .left-side .signUpForm span,
+.section_3 .left-side .signUpForm span,
+.section_4 .left-side .signUpForm span,
+.section_1 .left-side .signUpForm .alreadyHaveAcc,
+.section_2 .left-side .signUpForm .alreadyHaveAcc,
+.section_3 .left-side .signUpForm .alreadyHaveAcc,
+.section_4 .left-side .signUpForm .alreadyHaveAcc,
+.section_1 .left-side .signUpForm .register,
+.section_2 .left-side .signUpForm .register,
+.section_3 .left-side .signUpForm .register,
+.section_4 .left-side .signUpForm .register {
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+  transition: 0.3s;
+}
+.section_1 .left-side .signUpForm span:hover, .section_2 .left-side .signUpForm span:hover,
+.section_3 .left-side .signUpForm span:hover,
+.section_4 .left-side .signUpForm span:hover,
+.section_1 .left-side .signUpForm .alreadyHaveAcc:hover,
+.section_2 .left-side .signUpForm .alreadyHaveAcc:hover,
+.section_3 .left-side .signUpForm .alreadyHaveAcc:hover,
+.section_4 .left-side .signUpForm .alreadyHaveAcc:hover,
+.section_1 .left-side .signUpForm .register:hover,
+.section_2 .left-side .signUpForm .register:hover,
+.section_3 .left-side .signUpForm .register:hover,
+.section_4 .left-side .signUpForm .register:hover {
+  color: rgb(255, 205, 78);
+}
+.section_1 .left-side .signUpForm .loginAPIs, .section_2 .left-side .signUpForm .loginAPIs,
+.section_3 .left-side .signUpForm .loginAPIs,
+.section_4 .left-side .signUpForm .loginAPIs {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-inline: 0.4rem;
+  transition: 0.5s;
+  animation: zeroToOneOpacity 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.section_1 .left-side .signUpForm .loginAPIs:hover, .section_2 .left-side .signUpForm .loginAPIs:hover,
+.section_3 .left-side .signUpForm .loginAPIs:hover,
+.section_4 .left-side .signUpForm .loginAPIs:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.section_1 .right-side, .section_2 .right-side,
+.section_3 .right-side,
+.section_4 .right-side {
+  width: 34%;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  animation: fade-in-right 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.section_1 .right-side img, .section_2 .right-side img,
+.section_3 .right-side img,
+.section_4 .right-side img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}/*# sourceMappingURL=Sections.css.map */

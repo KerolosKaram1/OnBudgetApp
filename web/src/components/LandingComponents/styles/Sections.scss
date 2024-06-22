@@ -1,0 +1,237 @@
+@import "../../../styles/sass_files/_variables";
+@import "../../../styles/sass_files/_animations";
+@import "../../../styles/sass_files/_methods";
+
+.section_1 {
+  @include displayFlex;
+
+  .left-side {
+    width: $left-side-width;
+    height: 100vh;
+    background-color: $mainColor;
+    user-select: none;
+    font-family: $main-font-family;
+    @include displayFlex(column, nowrap, center, center, 1rem);
+
+    h1 {
+      color: $white;
+      font-size: $h1-font-size;
+      @include animation;
+    }
+    p {
+      font-size: $p-font-size;
+      color: $white;
+      word-spacing: 0.2rem;
+      @include animation;
+
+      span {
+        font-weight: bold;
+        font-size: $p-span-font-size;
+        font-family: $p-span-font-family;
+        color: $yellow;
+      }
+    }
+    button {
+      width: 7rem;
+      height: 2.5rem;
+      background-color: $white;
+      color: $mainColor;
+      outline: none;
+      border: none;
+      border-radius: 2rem;
+      font-size: $btn-font-size;
+      font-weight: bold;
+      box-shadow: 10px 10px 20px -2px $shadowColor;
+      -webkit-box-shadow: 10px 10px 20px -2px $shadowColor;
+      -moz-box-shadow: 10px 10px 20px -2px $shadowColor;
+      transition: 0.3s;
+      @include animation(bounce-top);
+
+      &:not(:disabled):hover {
+        cursor: pointer;
+        background-color: $yellow;
+        color: $red;
+      }
+      &:disabled {
+        cursor: not-allowed;
+        background-color: $grey;
+      }
+    }
+    .goToLoginBtn,
+    .goToSignUpBtn {
+      text-decoration: none;
+      @include displayFlex(row, nowrap, center, center);
+      @extend button;
+    }
+    .dots {
+      width: 3rem;
+      height: 0.6rem;
+      @include displayFlex(row, nowrap, space-between);
+
+      .dot1,
+      .dot2,
+      .dot3 {
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 50%;
+        background-color: $white;
+      }
+    }
+    .loginForm {
+      width: $login-form-width;
+      height: $login-form-height;
+      @include displayFlex(column, nowrap, space-between, center);
+
+      .inputFieldImg {
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        @include animation;
+      }
+      .emailInput,
+      .passInput {
+        width: $input-width;
+        height: 2rem;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $white;
+        color: $white;
+        font-size: $input-font-size;
+        padding-left: 2.5rem;
+        @include animation;
+
+        &::placeholder {
+          color: $grey;
+          font-size: $input-font-size;
+        }
+      }
+      .rememberMeInput,
+      .showPassInput {
+        cursor: pointer;
+        width: 0.9rem;
+        height: 0.9rem;
+      }
+      span,
+      .alreadyHaveAcc,
+      .register {
+        cursor: pointer;
+        color: $black;
+        text-decoration: underline;
+        transition: 0.3s;
+
+        &:hover {
+          color: $yellow;
+        }
+      }
+      .loginAPIs {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-inline: 0.4rem;
+        transition: 0.5s;
+        @include animation(zeroToOneOpacity);
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+        }
+      }
+    }
+    .signUpForm {
+      margin-top: -2rem;
+      width: $signup-form-width;
+      height: $signup-form-height;
+      @include displayFlex(column, nowrap, space-between, center);
+
+      .nameInput,
+      .phoneInput,
+      .emailInput,
+      .passInput,
+      .confirmPassInput {
+        width: $input-width;
+        height: 2rem;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $white;
+        color: $white;
+        font-size: $input-font-size;
+        padding-left: 2.5rem;
+        @include animation;
+
+        &::placeholder {
+          color: $grey;
+          font-size: $input-font-size;
+        }
+      }
+      .inputFieldImg {
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        @include animation;
+      }
+      .genderImg,
+      .userType {
+        margin-inline: 1rem;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        transition: 0.5s;
+        @include animation(zeroToOneOpacity);
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+        }
+      }
+      .policiesInput {
+        cursor: pointer;
+        width: 0.9rem;
+        height: 0.9rem;
+      }
+      span,
+      .alreadyHaveAcc,
+      .register {
+        cursor: pointer;
+        color: $black;
+        text-decoration: underline;
+        transition: 0.3s;
+
+        &:hover {
+          color: $yellow;
+        }
+      }
+      .loginAPIs {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-inline: 0.4rem;
+        transition: 0.5s;
+        @include animation(zeroToOneOpacity);
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .right-side {
+    width: $right-side-width;
+    height: 100vh;
+    background-color: $white;
+    @include animation(fade-in-right);
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block; // remove extra spacing
+    }
+  }
+}
+
+.section_2,
+.section_3,
+.section_4 {
+  @extend .section_1;
+}

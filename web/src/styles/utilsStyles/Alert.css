@@ -1,0 +1,16 @@
+.alert-message {
+  position: fixed;
+  bottom: 5%;
+  left: calc(50% - 100px);
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 20px 1px rgba(122, 122, 122, 0.3);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  z-index: 10;
+}

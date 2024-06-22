@@ -1,0 +1,200 @@
+:root {
+  /* Colors */
+  --overlay-bg-color__view-more-btn-bg-color__pagination-bullet-color: #006880;
+  --view-more-btn-bg-hover-color__pagination-bullet-hover-color: #0194b5;
+
+  --product-name-color__nav-btn-hover-color: #333;
+  --product-description-color__nav-btn-color: #4b4b4b;
+
+  --main-color: white;
+
+  /* Dimensions */
+  --carousel-max-width: 98%;
+}
+
+.header {
+  /* margin: 60px 0 0 20px; */
+  cursor: pointer;
+  user-select: none;
+  width: fit-content;
+  transition: transform 0.3s ease;
+}
+
+.header:hover {
+  transform: scale(1.02);
+}
+
+.slide-container {
+  max-width: var(--carousel-max-width);
+  width: var(--carousel-max-width);
+  padding: 40px 0;
+  user-select: none;
+}
+.slide-content {
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.card {
+  border-radius: 25px;
+  background-color: var(--main-color);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.image-content {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(
+    --overlay-bg-color__view-more-btn-bg-color__pagination-bullet-color
+  );
+  border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: var(
+    --overlay-bg-color__view-more-btn-bg-color__pagination-bullet-color
+  );
+}
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: var(--main-color);
+}
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: var(--main-color);
+  padding: 2px;
+}
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.name {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--product-name-color__nav-btn-hover-color);
+}
+.description {
+  font-size: 14px;
+  color: var(--product-description-color__nav-btn-color);
+  text-align: center;
+}
+.button {
+  border: none;
+  font-size: 16px;
+  color: var(--main-color);
+  padding: 8px 16px;
+  background-color: var(
+    --overlay-bg-color__view-more-btn-bg-color__pagination-bullet-color
+  );
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  background: var(
+    --view-more-btn-bg-hover-color__pagination-bullet-hover-color
+  );
+}
+
+.swiper-navBtn {
+  background-color: rgba(102, 102, 102, 0.5);
+  border-radius: 50%;
+  padding-inline: 6px;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+.swiper-navBtn:hover {
+  background-color: var(--product-name-color__nav-btn-hover-color);
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 25px;
+  font-weight: bold;
+}
+.swiper-button-next {
+  right: 0;
+  padding-inline-end: 3px;
+}
+.swiper-button-prev {
+  left: 0;
+  padding-inline-start: 3px;
+}
+.swiper-pagination-bullet {
+  background-color: var(
+    --overlay-bg-color__view-more-btn-bg-color__pagination-bullet-color
+  );
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(
+    --view-more-btn-bg-hover-color__pagination-bullet-hover-color
+  );
+}
+
+.buttons-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: blue; */
+}
+
+.icons-container {
+  width: 50%;
+  /* background-color: red; */
+  height: fit-content;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.icon {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content {
+    margin: 0 10px;
+  }
+  .swiper-navBtn {
+    display: none;
+  }
+}
